@@ -362,8 +362,9 @@ typedef enum {
         case MFSideMenuStateClosed: {
             [self sendStateEventNotification:MFSideMenuStateEventMenuWillClose];
             [self closeSideMenuCompletion:^{
-                [self.leftMenuViewController view].hidden = YES;
-                [self.rightMenuViewController view].hidden = YES;
+                /* CHANGED: menus are no longer being hidden */
+                //[self.leftMenuViewController view].hidden = YES;
+                //[self.rightMenuViewController view].hidden = YES;
                 innerCompletion();
             }];
             break;
