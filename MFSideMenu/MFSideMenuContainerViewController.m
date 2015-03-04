@@ -119,7 +119,9 @@ typedef enum {
         [self setLeftSideMenuFrameToClosedPosition];
         [self setRightSideMenuFrameToClosedPosition];
         [self addGestureRecognizers];
-        [self.shadow draw];
+        /* CHANGED: removed this line because we don't need the shadow 
+         (and it did something weird in ios7.1) git status*/
+        //[self.shadow draw];
         
         self.viewHasAppeared = YES;
     }
